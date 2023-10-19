@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    <title>Aria Stark</title>
+    <link rel="stylesheet" href="mini5.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Aria Stark</a>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="showPage('home')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showPage('hobbies')">Hobbies</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!-- Home Section -->
+    <div id="homePage" class="container mt-5">
+        <div class="row">
+            <!-- Image Column -->
+            <div class="col-12 col-md-4 col-lg-3 mb-4 text-center">
+                <img src="aria_stark.jpg" alt="Aria Stark" class="img-fluid rounded-circle">
+            </div>
+            
+            <!-- Content Column -->
+            <div class="col-12 col-md-8 col-lg-9">
+                <h1 class="display-4">Welcome to Aria Stark's World</h1>
+                
+                <!-- Random Quote Display -->
+                <blockquote id="randomQuote" class="blockquote mb-4">
+                <p></p>
+                <footer class="blockquote-footer">Unknown</footer>
+                </blockquote>
+                <div class="col-12 col-md-8">
+                    <!-- Skills -->
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <!-- ... -->
+                    </ul>
+    
+                    <!-- Education -->
+                    <h3>Education</h3>
+                    <p>Details about education, degrees, and institutions.</p>
+    
+                    <!-- Work Experience -->
+                    <h3>Work Experience</h3>
+                    <p>Details about previous roles, companies, and responsibilities.</p>
+                </div>
+                <p class="lead" id="bioContent">
+                    Aria Stark, a young warrior with a penchant for literature and the arts...
+                    <span id="moreBio">hails from the mystical lands of Westerosewood. Combining the fierce determination of a Stark with the creative soul of a writer, she's a force to be reckoned with. When she's not training in the art of swordsmanship, you'll find her penning tales of love, mystery, and adventure.</span>
+                </p>
+                
+                <!-- Show More/Less Button -->
+                <button class="btn btn-secondary mb-3" id="showMoreBtn">Show More</button>
+                
+                <!-- Random Fact Generator -->
+                <button class="btn btn-outline-dark mb-3" id="generateFactBtn">Generate Random Fact</button>
+                <p id="randomFact"></p>
+            </div>
+        </div>
+    </div>
+
+     <!-- Hobbies Section -->
+     <div id="hobbiesPage" class="container mt-5" style="display: none;">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="hobby_header.jpg" alt="Hobbies" class="img-fluid mb-4">
+                <p>Fun introduction about Aria's hobbies and interests.</p>
+            </div>
+        </div>
+        
+        <!-- List of Hobbies -->
+        <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+                <img src="hobby1_icon.png" alt="Hobby 1" class="img-fluid mb-2">
+                <p>Description about hobby 1.</p>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <img src="hobby2_icon.png" alt="Hobby 2" class="img-fluid mb-2">
+                <p>Description about hobby 2.</p>
+            </div>
+            <!-- ... More hobbies ... -->
+        </div>
+
+        <!-- Gallery -->
+        <div class="row">
+            <div class="col-12 col-md-4 mb-3">
+                <img src="hobby_image1.jpg" alt="Image 1" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <img src="hobby_image2.jpg" alt="Image 2" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <img src="hobby_image3.jpg" alt="Image 3" class="img-fluid">
+            </div>
+            <!-- ... More images ... -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light text-center py-3">
+        <p>&copy; 2023 Aria Stark. All rights reserved.</p>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script>
+        function toggleNavbar() {
+            var navbarContent = document.getElementById("navbarNav");
+            if (navbarContent.style.display === "none" || navbarContent.style.display === "") {
+                navbarContent.style.display = "block";
+            } else {
+                navbarContent.style.display = "none";
+            }
+        }
+
+
+        function showPage(pageId) {
+        // Hide all pages
+        const allPages = ['homePage', 'hobbiesPage'];
+        allPages.forEach(page => {
+            document.getElementById(page).style.display = 'none';
+        });
+
+        // Show the selected page
+        document.getElementById(pageId + 'Page').style.display = 'block';
+    }
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+        // Show More/Less
+        const moreBioElement = document.getElementById("moreBio");
+        const showMoreBtn = document.getElementById("showMoreBtn");
+
+        moreBioElement.style.display = "none";
+
+        showMoreBtn.addEventListener("click", function() {
+            if (moreBioElement.style.display === "none") {
+                moreBioElement.style.display = "inline";
+                showMoreBtn.textContent = "Show Less";
+            } else {
+                moreBioElement.style.display = "none";
+                showMoreBtn.textContent = "Show More";
+            }
+        });
+
+        // Random Fact Generator
+        const facts = [
+            "Aria Stark once wrote a best-selling novel under a pseudonym.",
+            "Despite her fierce appearance, Aria has a soft spot for poetry.",
+            "Aria's favorite weapon isn't her sword, but her quill.",
+            // Add more facts as desired
+        ];
+
+        const randomFactElement = document.getElementById("randomFact");
+        const generateFactBtn = document.getElementById("generateFactBtn");
+
+        generateFactBtn.addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            randomFactElement.textContent = facts[randomIndex];
+        });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* mini5.css */
+
+/* Sticky Header and Footer */
+.navbar {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Keep the navbar above all other content */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Keep the footer above all other content */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px 15px;
+}
+
+h1.display-4 {
+    color: #333333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p.lead {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.btn-primary:hover {
+    background-color: #1a2533;
+    border-color: #1a2533;
+}
+
+img.img-fluid.rounded-circle {
+    border: 5px solid #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlight on Hover */
+.hoverHighlight {
+    transition: background-color 0.3s;
+}
+
+.hoverHighlight:hover {
+    background-color: #e0e0e0;
+}
+
+/* Interactive Elements */
+
+/* Hover effect on the image */
+img.img-fluid.rounded-circle:hover {
+    transform: scale(1.05); /* Slightly scale up */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Button Animation */
+.btn-primary:hover {
+    transform: scale(0.95); /* Slightly shrink */
+    background-color: #1a2533;
+    border-color: #1a2533;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Phones (small screens) */
+@media (max-width: 576px) {
+    h1.display-4 {
+        font-size: 24px;
+    }
+    
+    p.lead {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        padding: 12px 20px;
+    }
+    
+    .container {
+        padding: 15px; /* Smaller padding for phones to maximize space */
+    }
+}
+
+/* Tablets (medium screens) */
+@media (min-width: 577px) and (max-width: 992px) {
+    h1.display-4 {
+        font-size: 28px;
+    }
+    
+    p.lead {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        padding: 14px 24px;
+    }
+}
+
+/* Desktops (larger screens) */
+@media (min-width: 993px) {
+    h1.display-4 {
+        font-size: 32px;
+    }
+    
+    p.lead {
+        font-size: 20px;
+    }
+
+    .btn-primary {
+        padding: 16px 28px;
+    }
+}
