@@ -2,12 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    <title>Aria Stark</title>
+    <title>Arya Stark</title>
     <link rel="stylesheet" href="mini5.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light m">
         <a class="navbar-brand" href="#">Aria Stark</a>
         <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
             <span class="navbar-toggler-icon"></span>
@@ -30,38 +30,69 @@
         <div class="row">
             <!-- Image Column -->
             <div class="col-12 col-md-4 col-lg-3 mb-4 text-center">
-                <img src="aria_stark.jpg" alt="Aria Stark" class="img-fluid rounded-circle">
+                <img src="images/arya.jpeg" alt="Aria Stark" class="img-fluid rounded-circle">
             </div>
             
             <!-- Content Column -->
             <div class="col-12 col-md-8 col-lg-9">
-                <h1 class="display-4">Welcome to Aria Stark's World</h1>
                 
-                <!-- Random Quote Display -->
-                <blockquote id="randomQuote" class="blockquote mb-4">
-                <p></p>
-                <footer class="blockquote-footer">Unknown</footer>
-                </blockquote>
                 <div class="col-12 col-md-8">
                     <!-- Skills -->
                     <h3>Skills</h3>
                     <ul>
-                        <li>Skill 1</li>
-                        <li>Skill 2</li>
-                        <!-- ... -->
+                        <li>Swordsmanship</li>
+                        <li>Stealth and Evasion</li>
+                        <li>Hand-to-Hand Combat</li>
+                        <li>Disguise</li>
+                        <li>Assassination Techniques</li>
+                        <li>Poisons</li>
                     </ul>
     
                     <!-- Education -->
                     <h3>Education</h3>
-                    <p>Details about education, degrees, and institutions.</p>
-    
+                    <h5>Water Dance Swordsmanship</h5>
+                    <ul>
+                        <li>Trainer: Syrio Forel, First Sword of Braavos</li>
+                        <li>Location: King's Landing</li>
+                        <li>Skills Acquired: Proficiency in Braavosi style of fencing, agility, and quick reflexes.</li>
+                    </ul>
+                    <h5>Faceless Men Training</h5>
+                    <ul>
+                        <li>Institution: The House of Black and White</li>
+                        <li>Location: Braavos</li>
+                        <li>Skills Acquired: Mastery in disguise and impersonation, assassination techniques, poison handling, observation, and deduction.</li>
+                    </ul>
+                    <h5>Combat & Survival Training</h5>
+                    <ul>
+                        <li>Trainer: Sandor "The Hound" Clegane</li>
+                        <li>Location: Various parts of Westeros</li>
+                        <li>Skills Acquired: Hand-to-hand combat, wilderness survival, and adaptability.</li>
+                    </ul>
                     <!-- Work Experience -->
                     <h3>Work Experience</h3>
-                    <p>Details about previous roles, companies, and responsibilities.</p>
+                    <h5>Apprentice to the Faceless Men</h5>
+                    <ul>
+                        <li>Organization: The House of Black and White</li>
+                        <li>Location: Braavos</li>
+                        <li>Duration: Approximately 1 year</li>
+                    </ul>
+                    <h5>Traveling Companion & Informal Protector</h5>
+                    <ul>
+                        <li>Associate: Sandor "The Hound" Clegane</li>
+                        <li>Location: Various parts of Westeros</li>
+                        <li>Duration: Several months</li>
+                    </ul>
+                    <h5>Cupbearer & Spy</h5>
+                    <ul>
+                        <li>Employer: Tywin Lannister</li>
+                        <li>Location: Harrenhal</li>
+                        <li>Duration: Several weeks</li>
+                    </ul>
                 </div>
+                <h3>Who really am I?</h3>
                 <p class="lead" id="bioContent">
-                    Aria Stark, a young warrior with a penchant for literature and the arts...
-                    <span id="moreBio">hails from the mystical lands of Westerosewood. Combining the fierce determination of a Stark with the creative soul of a writer, she's a force to be reckoned with. When she's not training in the art of swordsmanship, you'll find her penning tales of love, mystery, and adventure.</span>
+                    Arya Stark, a young warrior with a penchant for literature and the arts...
+                    <span id="moreBio">I hail from the mystical lands of Westerosewood. Combining the fierce determination of a Stark with the creative soul of a writer, I am a force to be reckoned with. When I'm not training in the art of swordsmanship, you'll find me penning tales of love, mystery, and adventure.</span>
                 </p>
                 
                 <!-- Show More/Less Button -->
@@ -78,45 +109,38 @@
      <div id="hobbiesPage" class="container mt-5" style="display: none;">
         <div class="row">
             <div class="col-12 text-center">
-                <img src="hobby_header.jpg" alt="Hobbies" class="img-fluid mb-4">
-                <p>Fun introduction about Aria's hobbies and interests.</p>
+                <h1>Hobbies </h1>
             </div>
         </div>
         
         <!-- List of Hobbies -->
         <div class="row">
-            <div class="col-12 col-md-6 mb-4">
-                <img src="hobby1_icon.png" alt="Hobby 1" class="img-fluid mb-2">
-                <p>Description about hobby 1.</p>
+            <div class="col-12 col-md-6 mb-4" style="display: flex; align-items: center;">
+                <img src="images/arya_horse.jpg" alt="Horseback Riding" class="img-fluid mb-2 hobby-image" style="margin-right: 20px;">
+                <p>Horseback Riding</p>
             </div>
-            <div class="col-12 col-md-6 mb-4">
-                <img src="hobby2_icon.png" alt="Hobby 2" class="img-fluid mb-2">
-                <p>Description about hobby 2.</p>
+            <div class="col-12 col-md-6 mb-4" style="display: flex; align-items: center;">
+                <img src="images/arya_sword.jpeg" alt="Sword fighting" class="img-fluid mb-2 hobby-image" style="margin-right: 20px;">
+                <p>Sword fighting</p>
             </div>
-            <!-- ... More hobbies ... -->
         </div>
-
-        <!-- Gallery -->
         <div class="row">
-            <div class="col-12 col-md-4 mb-3">
-                <img src="hobby_image1.jpg" alt="Image 1" class="img-fluid">
+            <div class="col-12 col-md-6 mb-4" style="display: flex; align-items: center;">
+                <img src="images/arya_poison.webp" alt="Poisons" class="img-fluid mb-2 hobby-image" style="margin-right: 20px;">
+                <p>Poisons</p>
             </div>
-            <div class="col-12 col-md-4 mb-3">
-                <img src="hobby_image2.jpg" alt="Image 2" class="img-fluid">
+            <div class="col-12 col-md-6 mb-4" style="display: flex; align-items: center;">
+                <img src="images/arya_archery.jpeg" alt="Archery" class="img-fluid mb-2 hobby-image" style="margin-right: 20px;">
+                <p>Archery</p>
             </div>
-            <div class="col-12 col-md-4 mb-3">
-                <img src="hobby_image3.jpg" alt="Image 3" class="img-fluid">
-            </div>
-            <!-- ... More images ... -->
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer bg-light text-center py-3">
-        <p>&copy; 2023 Aria Stark. All rights reserved.</p>
+    <footer class="footer bg-light text-center py-1">
+        <p>&copy; 2023 Arya Stark. All rights reserved.</p>
     </footer>
 
-    <script src="js/bootstrap.js"></script>
     <script>
         function toggleNavbar() {
             var navbarContent = document.getElementById("navbarNav");
@@ -160,10 +184,9 @@
 
         // Random Fact Generator
         const facts = [
-            "Aria Stark once wrote a best-selling novel under a pseudonym.",
-            "Despite her fierce appearance, Aria has a soft spot for poetry.",
-            "Aria's favorite weapon isn't her sword, but her quill.",
-            // Add more facts as desired
+            "Arya Stark once wrote a best-selling novel under a pseudonym.",
+            "Despite her fierce appearance, Arya has a soft spot for poetry.",
+            "Arya's favorite weapon isn't her sword, but her quill.",
         ];
 
         const randomFactElement = document.getElementById("randomFact");

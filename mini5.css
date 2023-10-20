@@ -81,22 +81,28 @@ img.img-fluid.rounded-circle:hover {
     transition: all 0.3s ease; /* Smooth transition */
 }
 
+.hobby-image {
+    width: 100px;  /* or any desired width */
+    height: 100px; /* or any desired height */
+    object-fit: fill; /* to ensure the image covers the defined width and height without distortion */
+}
+
 /* Phones (small screens) */
 @media (max-width: 576px) {
     h1.display-4 {
         font-size: 24px;
-    }
-    
-    p.lead {
-        font-size: 16px;
     }
 
     .btn-primary {
         padding: 12px 20px;
     }
     
+    p.lead {
+        font-size: 16px;
+    }
+    
     .container {
-        padding: 15px; /* Smaller padding for phones to maximize space */
+        padding: 15px;
     }
 }
 
@@ -113,6 +119,10 @@ img.img-fluid.rounded-circle:hover {
     .btn-primary {
         padding: 14px 24px;
     }
+
+    .container {
+        padding: 15px;
+    }
 }
 
 /* Desktops (larger screens) */
@@ -120,12 +130,17 @@ img.img-fluid.rounded-circle:hover {
     h1.display-4 {
         font-size: 32px;
     }
+
+    .btn-primary {
+        padding: 16px 28px;
+    }
     
     p.lead {
         font-size: 20px;
     }
 
-    .btn-primary {
-        padding: 16px 28px;
+    .container {
+        padding: 15px;
     }
+
 }
